@@ -326,4 +326,35 @@ print(ganjil - genap)   # Difference
 {1, 2, 3, 4, 5, 6, 7, 8}
 set()
 {1, 3, 5, 7}
+# Membuat dictionary sederhana
+mahasiswa = {
+    "nama": "Budi",
+    "umur": 20,
+    "jurusan": "Informatika"
+}
+
+print(mahasiswa)
+{'nama': 'Budi', 'umur': 20, 'jurusan': 'Informatika'}
+print(mahasiswa["nama"])    # Budi
+print(mahasiswa.get("umur")) # 20
+mahasiswa["angkatan"] = 2023   # Menambah data baru
+mahasiswa["umur"] = 21         # Mengubah value umur
+
+print(mahasiswa)
+{'nama': 'Budi', 'umur': 21, 'jurusan': 'Informatika', 'angkatan': 2023}
+mahasiswa.pop("jurusan")   # Menghapus dengan key
+del mahasiswa["nama"]      # Menghapus dengan del
+
+print(mahasiswa)
+{'umur': 21, 'angkatan': 2023}
+for key, value in mahasiswa.items():
+    print(key, ":", value)
+umur : 21
+angkatan : 2023
+kampus = {
+    "mahasiswa1": {"nama": "Budi", "umur": 21},
+    "mahasiswa2": {"nama": "Siti", "umur": 22}
+}
+
+print(kampus["mahasiswa1"]["nama"])  # Budi
 
