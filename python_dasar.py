@@ -231,4 +231,43 @@ for i in range(1, 6):
 # 1
 # 2
 # 4
+def sapa():
+    print("Halo, selamat datang di Python!")
+
+# Memanggil function
+sapa()
+#Halo, selamat datang di Python!
+def sapa_nama(nama):
+    print(f"Halo {nama}, semoga harimu menyenangkan!")
+
+sapa_nama("Budi")
+sapa_nama("Siti")
+#Halo Budi, semoga harimu menyenangkan!
+#Halo Siti, semoga harimu menyenangkan!
+#Hasil penjumlahan: 12
+def sapa_orang(nama="Teman"):
+    print(f"Halo {nama}!")
+
+sapa_orang("Andi")  # Menggunakan parameter
+sapa_orang()        # Menggunakan default
+#Halo Andi!
+#Halo Teman!
+# *args
+def jumlahkan(*angka):
+    total = sum(angka)
+    print("Total:", total)
+
+jumlahkan(1, 2, 3, 4, 5)  # Bisa input banyak angka
+
+
+# **kwargs
+def biodata(**data):
+    for key, value in data.items():
+        print(f"{key}: {value}")
+
+biodata(nama="Budi", umur=20, kota="Jakarta")
+Total: 15
+nama: Budi
+umur: 20
+kota: Jakarta
 
